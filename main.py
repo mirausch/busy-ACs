@@ -5,12 +5,14 @@ url = "https://outlook.office365.com/owa/calendar/af46911eeef94613a79a8f1f733257
 c = Calendar(requests.get(url).text)
 e = Event()
 e.name = "Bob's meeting"
-e.begin = '2025-09-07 00:00:00'
+e.begin = '2025-07-09T11:05:00'
 c.events.add(e)
 c.events
 
-g = Event()
-g.name = "Meeting 2"
-g.begin = '2025-09-08 00:00:00'
+#g = Event()
+#g.name = "Meeting 2"
+#g.begin = '2025-09-08T00:00:00'
+#c.events.add(g)
+#c.events
 
 print(e)
