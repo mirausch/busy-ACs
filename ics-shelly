@@ -12,7 +12,10 @@ shelly_OG3_VT = "192.168.50.209"
 # test: requests.get(f"http://{shelly_OG3_VT}/relay/0?turn=on")
 
 def control_shelly_plug(ip_address, turn_on=True):
-    """Control Shelly plug - turn on/off"""
+    """Control Shelly plug via http req. - turn on/off
+    Args:
+    ip_address (str): IP address of the Shelly plug
+    turn_on (bool): True to turn on, False to turn off"""
     try:
         if turn_on:
             url = f"http://{ip_address}/relay/0?turn=on"
